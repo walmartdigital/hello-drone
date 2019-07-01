@@ -15,8 +15,3 @@ steps:
   when:
     event:
     - push
-
-
-
-
-...
