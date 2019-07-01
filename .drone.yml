@@ -1,0 +1,7 @@
+pipeline:
+  test:
+    image: alpine:3.9
+    commands:
+    - printenv
+    when:
+      event: push
