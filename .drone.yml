@@ -1,7 +1,19 @@
-pipeline:
-  test:
-    image: alpine:3.9
-    commands:
-    - printenv
-    when:
-      event: push
+---
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: test
+  pull: default
+  image: alpine:3.9
+  commands:
+  - printenv
+  when:
+    event:
+    - push
+
+...
